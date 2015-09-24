@@ -12,9 +12,11 @@ $(document).mousemove(function( event ) {
 	document.getElementById('Etudiant').innerHTML = "Hello " + my_chance.first() +" "+ my_chance.last() +" (" + my_chance.gender() +")";
 });
 
-
-
+// fonction pour la date/heure
+$('#gmt').ready(function()
+{
 $('#gmt').text(Date());
+})
 
 setInterval(clock, 1000);
 function clock()
@@ -24,17 +26,11 @@ function clock()
 
 
 
-
+// affichage du json
 $(document).ready(function(){
-	$.ajax({
-	  dataType: "json",
-	  url: "rooms.json",
-	  success: function(response){
-		  alert(response.Rooms + "test ");
-		  for (room in response.Rooms)
-		  {
-			$('#Room').append("<p>" + room + "</p>");
-		  }
-	  }
-	});	
+	$.getJSON('rooms.json', function(data) {
+    $.each(data, function(index, value) {
+        $('#Room').append("<p>" +value.name+ " - " + value.room +"</p>");
+    });
+});
 });

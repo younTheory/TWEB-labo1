@@ -1,16 +1,14 @@
-{
-	Rooms: [
-		{
-		room: "A38",
-		name: "Yannick"
-		},
-		{
-		room: "B46",
-		name: "Luc"
-		},
-		{
-		room: "C66",
-		name: "Fmo"
-		}
-	]
-}
+[
+    {
+        "room": "A38",
+        "name": "Yannick"
+    },
+    {
+        "room": "B46",
+        "name": "Luc"
+    },
+    {
+        "room": "C66",
+        "name": "Fmo"
+    }
+]
